@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_app_gradient">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- HOME SCREEN -->
+        <ScrollView
+            android:id="@+id/homeScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🥗 CALORIE BUDDY"
+                    android:textColor="@color/green_dark"
+                    android:textStyle="bold"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/txtGreeting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hello!"
+                    android:textColor="@color/text_dark"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="18dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_subtitle"
+                    android:textColor="@color/text_muted"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <!-- CALORIE SUMMARY CARD -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card"
+                    android:padding="20dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/today_summary"
+                        android:textColor="@color/green"
+                        android:textStyle="bold"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/txtConsumed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 kcal"
+                        android:textColor="@color/text_dark"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calories_consumed"
+                        android:textColor="@color/text_muted"
+                        android:textSize="14sp" />
+
+                    <ProgressBar
+                        android:id="@+id/calorieProgress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:max="2000"
+                        android:progress="0"
+                        android:progressTint="@color/green"
+                        android:progressBackgroundTint="@color/mint"
+                        android:layout_marginTop="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txtGoal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Goal: 2000 kcal"
+                            android:textColor="@color/text_muted"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/txtRemaining"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2000 kcal left"
+                            android:textColor="@color/green"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- MEALS -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YOUR MEALS"
+                    android:textColor="@color/green_dark"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🌅 Breakfast"
+                        android:textColor="@color/text_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/breakfastMeal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/border" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="☀️ Lunch"
+                        android:textColor="@color/text_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp" />
+
+                    <LinearLayout
+                        android:id="@+id/lunchMeal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/border" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🌙 Dinner"
+                        android:textColor="@color/text_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp" />
+
+                    <LinearLayout
+                        android:id="@+id/dinnerMeal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <!-- ADD FOOD -->
+                <Button
+                    android:id="@+id/btnAddFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="@string/add_food"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/green"
+                    android:layout_marginTop="18dp" />
+
+                <!-- CLEAR TODAY'S FOOD -->
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/clear_food"
+                    android:textColor="@color/green_dark"
+                    android:backgroundTint="@color/mint"
+                    android:layout_marginTop="8dp" />
+
+                <!-- NEW DAILY HISTORY BUTTON -->
+                <Button
+                    android:id="@+id/btnHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="📅 View Daily History"
+                    android:textColor="@color/green_dark"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginTop="8dp" />
+
+                <!-- LOGOUT -->
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/logout"
+                    android:textColor="@color/red"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="20dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- PROFILE SCREEN -->
+        <ScrollView
+            android:id="@+id/profileScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_title"
+                    android:textColor="@color/green_dark"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_marginBottom="18dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/daily_goal"
+                        android:textColor="@color/text_muted"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/profileGoal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2000 kcal"
+                        android:textColor="@color/green_dark"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/consumed"
+                        android:textColor="@color/text_muted"
+                        android:textSize="14sp"
+                        android:layout_marginTop="12dp" />
+
+                    <TextView
+                        android:id="@+id/profileConsumed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 kcal"
+                        android:textColor="@color/text_dark"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/remaining"
+                        android:textColor="@color/text_muted"
+                        android:textSize="14sp"
+                        android:layout_marginTop="12dp" />
+
+                    <TextView
+                        android:id="@+id/profileRemaining"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2000 kcal"
+                        android:textColor="@color/green"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/breakfast_foods"
+                    android:textColor="@color/green_dark"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_marginTop="22dp" />
+
+                <TextView
+                    android:id="@+id/profileBreakfast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_food"
+                    android:textColor="@color/text_muted"
+                    android:background="@drawable/bg_card"
+                    android:padding="14dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lunch_foods"
+                    android:textColor="@color/green_dark"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/profileLunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_food"
+                    android:textColor="@color/text_muted"
+                    android:background="@drawable/bg_card"
+                    android:padding="14dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dinner_foods"
+                    android:textColor="@color/green_dark"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/profileDinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_food"
+                    android:textColor="@color/text_muted"
+                    android:background="@drawable/bg_card"
+                    android:padding="14dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+    <!-- BOTTOM NAVIGATION -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="8dp">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="⌂ Home"
+            android:textColor="@color/green_dark"
+            android:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="♙ Profile"
+            android:textColor="@color/green_dark"
+            android:backgroundTint="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

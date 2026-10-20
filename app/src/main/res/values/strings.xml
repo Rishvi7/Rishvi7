@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calorie Buddy</string>
+    <string name="brand">CALORIE BUDDY</string>
+    <string name="tagline">Eat well. Live better.</string>
+
+    <string name="register_title">Create your account</string>
+    <string name="register_subtitle">Start your healthy journey today</string>
+    <string name="name_hint">Full name</string>
+    <string name="email_hint">Email address</string>
+    <string name="password_hint">Password</string>
+    <string name="goal_hint">Daily calorie goal</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="login_prompt">Already have an account? Login</string>
+
+    <string name="login_title">Welcome back!</string>
+    <string name="login_subtitle">Your healthy journey continues here</string>
+    <string name="login_button">LOGIN</string>
+    <string name="register_prompt">New here? Create an account</string>
+
+    <string name="home_subtitle">Track your meals. Reach your goals.</string>
+    <string name="today_summary">TODAY SUMMARY</string>
+    <string name="calories_consumed">Calories consumed</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="add_food">Add Food</string>
+    <string name="clear_food">Clear Food List</string>
+    <string name="logout">Logout</string>
+
+    <string name="profile_title">My Nutrition Profile</string>
+    <string name="daily_goal">Daily goal</string>
+    <string name="consumed">Consumed</string>
+    <string name="remaining">Remaining</string>
+    <string name="breakfast_foods">Breakfast foods</string>
+    <string name="lunch_foods">Lunch foods</string>
+    <string name="dinner_foods">Dinner foods</string>
+    <string name="no_food">No food added yet</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="privacy_note">Demo account stored on this device</string>
+</resources>
